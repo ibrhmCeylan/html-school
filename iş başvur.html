@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İş Başvurusu</title>
+
+  <!-- CSS KISMI  -->
+  <style>
+    *{
+      margin: 2px;
+    }
+    
+    fieldset
+    {
+      width: 15%;
+    }
+    body{
+      background-color: rgb(80, 80, 80);
+      padding: 10px;
+    }
+    h1{
+      color: rgb(218, 183, 88);
+    }
+    fieldset{
+      color: rgb(255, 215, 103);
+      border: 3px solid rgb(218, 183, 88) ;
+    }
+    input{
+      background-color: rgb(138, 138, 138);
+      color: rgb(255, 215, 103);
+      border: 1px solid rgb(218, 183, 88);
+    }
+    textarea{
+      background-color: rgb(138, 138, 138);
+      color: rgb(255, 215, 1037);
+    }
+    select{
+      border: none;
+      width: 90px;
+      height: 20px;
+      background-color: rgb(138, 138, 138);
+      color: rgb(255, 215, 103);
+    }
+  </style>
+  <!-- CSS KISMI  -->
+
+
+
+
+</head>
+<body>
+  <center><!-- İçine yazılanlar sayfanın ortasına konumlanır. -->
+  <h1>İş Başvuru Formu</h1>
+  <form action="#">
+    <fieldset>
+      <legend>Kişisel Bilgiler</legend>
+      <label>Ad Soyad</label><br>
+      <input name="adsoyad" type="text" placeholder="Ad Soyad Giriniz">      <br>
+      <br>
+      <label>Cinsiyet</label><br>
+      <input name="cins" type="radio">Erkek
+      <input name="cins" type="radio">Kız
+      <br>
+      <br>
+      
+    </fieldset>
+    <fieldset>
+      <legend>Diğer Bilgiler</legend>
+      <label>E-Posta</label><br>
+      <input type="email" placeholder="E-Posta giriniz"><br>
+      <br>
+      <label>Telefon</label><br>
+      <input type="tel" placeholder="0555 555 55 55"><br><br>
+      <label>Şehir</label><br>
+      <select name="d-yeri" size="1">
+        <option value="0">---Şehir Seçiniz---</option>
+        <option value="34">İstanbul</option>
+        <option value="35">İzmir</option>
+        <option value="36">Kars</option>
+        <option value="37">Kastamonu</option>
+      </select>
+      <br><br>
+      <label>İlçe</label>
+      <input type="text"><br><br>
+      <label>Adres</label><br>
+      <textarea name=""cols="20" rows="5" placeholder=""></textarea><br><br>
+      <label>Website Adresi</label><br>
+      <input name="website" type="url" placeholder="örnek: example.com">      <br>
+      <br>
+      
+      
+
+    </fieldset>
+    <fieldset>
+      <legend>Kariyer Bilgileri</legend>
+      <label for="">Başvurduğunuz Birim</label><br>
+      <input type="text" placeholder="Satış / Pazarlama"/><br>
+      <label for="">İş Tecrübesi</label><br>
+      <input type="number"  name="tecrübe" ><br>
+      <br>
+      <br>
+      <label>Yabancı Dil Seviyesi</label><br>
+      <input type="range">
+    </fieldset>
+    <fieldset>
+      <legend>Diğer Bilgiler</legend>
+      <br>
+      <label>Hobiler</label><br>
+      <input type="checkbox" value="Kitap">Kitap
+      <input type="checkbox" value="Müzik">Müzik
+      <input type="checkbox" value="Spor">Spor
+      <br><br>
+      <label>Favori Renk</label><br>
+      <input type="color"name="renk"><br><br>
+      <label>Fotoğraf Yükle</label><br>
+      <input type="file" name="foto"/><br>
+    </fieldset>
+    <br>
+    <input name="giris" type="submit" onclick="Ac()" value="Okudum Anladım">
+    <input name="temizle" type="submit" value="Tamam" disabled="on">
+    <input name="uyari" type="reset" onclick="Uyarı()" value="Temizle">
+  </form>
+  </center>
+  <script>
+    function Ac()
+    {
+
+    }
+    function Uyarı()
+    {
+      alert("Temizlendi!!!");
+    }
+  </script>
+</body>
+</html>
