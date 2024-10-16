@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0  ;
+    font-family: sans-serif;
+}
+body{
+    background-color: #007369;
+}
+.header{
+    height: 80px;
+    background-color: #003840;
+    padding: 20px;
+    color: white;
+
+}
+.logo{
+    line-height: 80px;
+    float: left;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.menu{
+    float: right;
+    line-height: 80px;
+    
+}
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    
+}
+
+.show-menu-btn, .hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn{
+    float: right;
+}
+.show-menu-btn i{
+    line-height: 100%;
+    padding: 30px 0;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: #005A5B;
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+}
+.content{
+    padding: 0 20px;
+    
+}
+.content h1{
+    text-align: justify;
+    margin: 20px;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 1000%;
+}
+
+@media  screen and (max-width: 800px) {
+    .show-menu-btn,.hide-menu-btn{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        background-color: #00e09d;
+        right: -100%;
+        top: 0px;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #chk:checked ~ .menu{
+        right: 0; 
+    }
+}
+
+.box{
+    width: 450px;
+    background-color: #02A676;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.box img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.box img:hover{
+    transform: scale(0.9);  
+}
+
+.box h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.box h5{
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+.box p{
+    text-align: justify;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+.box li a{
+    color: white;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+}
+
+.box li a:hover{
+    color: rgb(177, 177, 177);
+}
