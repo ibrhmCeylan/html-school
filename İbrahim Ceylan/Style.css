@@ -5,6 +5,19 @@
 }
 body{
     background-color: #007369;
+    
+}
+#loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #003840;
+    z-index: 999
 }
 .header{
     height: 80px;
@@ -213,3 +226,167 @@ fieldset{
     border: 2px solid black;
 }
 
+@import url('https://fonts.googleapis.com/css2? family=Poppins:wght@200;300;400;500;600;700& display=swap');
+
+.drag-area {
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 450px;
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: #fff;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #0fb8ac;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.file-item button.remove-btn {
+    background-color: red; /* Kırmızı arka plan */
+    color: white; /* Beyaz yazı rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    padding: 5px 10px; /* İç boşluk */
+    cursor: pointer; /* İmleç değişimi */
+    margin-left: auto; /* Butonu sağa yasla */
+}
+
+.file-item button.remove-btn:hover {
+    background-color: darkred; /* Üzerine gelindiğinde daha koyu kırmızı */
+}
+#fileList {
+    display: none; /* Başlangıçta gizle */
+}
+
+#fileList.visible {
+    display: block; /* Dosya yüklendiğinde göster */
+}
+
+.file-list {
+    margin-top: 80px;
+    margin-left: 20px;/* Dosya listesinin üstüne boşluk ekle */
+    margin-right: 1180px;
+    padding: 5px; /* İçerik için boşluk ekle */
+    border: 1px solid #ccc; /* Kenarlık ekle */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    background-color: #8f8f8f; /* Arka plan rengi */
+    max-height: 492px; /* Maksimum yükseklik */
+    overflow-y: auto; /* Taşma durumunda kaydırma çubuğu ekle */
+    cursor: pointer;
+}
+
+.file-viewer {
+    position: absolute; /* Sabit konum */
+    top:200px; /* Üstten boşluk */
+    left: 1372px; /* Ortaya hizalama */
+    transform: translateX(-50%); /* Ortaya hizalama */
+    width: 380px;
+    height: 500px;
+    background-color: white; /* Arka plan rengi */
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Kenar rengi */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+    z-index: 1000; /* Üstte kalması için */
+    display: none; /* Başlangıçta gizli */
+    
+    animation: fadeIn 0.3s; /* Animasyon */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#iframeViewer {
+    width: 100%; /* Genişlik */
+    height: 100%; /* Yükseklik */
+    border: none; /* Kenar çizgisi yok */
+    border-radius: 10px; /* Kenar yuvarlama */
+}
+
+#closeButton {
+    background: none; /* Arka planı kaldır */
+    border: none; /* Kenar çizgisini kaldır */
+    font-size: 24px; /* Font boyutu */
+    color: #333; /* Renk */
+    cursor: pointer; /* İmleci el şeklinde göster */
+    position: absolute; /* Konumu mutlak */
+    top: 10px; /* Üstten boşluk */
+    right: 10px; /* Soldan boşluk */
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+#closeButton:hover {
+    color: red; /* Üzerine gelince rengi değiştir */
+}
+.file-item {
+    
+    display: flex;
+    align-items: center; /* İkon ve metni ortala */
+    margin: 10px 0; /* Öğeler arasında boşluk bırak */
+    padding: 10px; /* Öğeler için iç boşluk */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    transition: background-color 0.2s; /* Geçiş efekti */
+}
+
+.file-item:hover {
+    background-color: #555555; /* Üzerine gelindiğinde arka plan rengi */
+}
+
+.file-item i {
+    margin-right: 10px; /* İkon ile metin arasına boşluk ekle */
+    color: #ffffff; /* İkon rengi */
+    font-size: 20px; /* İkon boyutu */
+}
+
+.file-item p {
+    margin: 0; /* Paragrafın varsayılan üst ve alt boşluklarını kaldır */
+    font-weight: 500; /* Kalın yazı tipi */
+    color: #ffffff; /* Metin rengi */
+    font-family: sans-serif;
+    font-size: 20px;
+}
