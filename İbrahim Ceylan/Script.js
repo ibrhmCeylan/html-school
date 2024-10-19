@@ -5,6 +5,33 @@ function fg_load(){
 
 
 
+function openTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.style.display = 'none');
+
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).style.display = 'block';
+    event.target.classList.add('active');
+}
+
+function scrollLeft() {
+    const container = document.getElementById('tabButtons');
+    container.scrollBy({ left: -100, behavior: 'smooth' }); // 100px sola kaydır
+}
+
+function scrollRight() {
+    const container = document.getElementById('tabButtons');
+    container.scrollBy({ left: 100, behavior: 'smooth' }); // 100px sağa kaydır
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    openTab('tab1');
+});
+
+
+
 
 const dropArea = document.querySelector(".drag-area"),
     dragText = dropArea.querySelector("header"),
@@ -102,4 +129,10 @@ function showFiles() {
     }
 }
 fileListDiv.classList.remove('visible');
+
+/*-----------------*/
+
+
+
+
 

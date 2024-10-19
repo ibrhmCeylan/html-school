@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,13 @@
   <title>HTML Projeler</title>
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
 </head>
 <body>
+  <script src="Script.js"></script>
+    <div id="loading">
+        <img src="loading.gif" alt="Yükleniyor...">
+    </div>
   <div class="header">
     <h2 class="logo">İbrahim Ceylan</h2>
     <input type="checkbox" id="chk">
@@ -19,6 +24,7 @@
             <a href="Hakkımda.html">Hakkımda</a>
             <a href="HtmlProjeler.html">Html Projeler</a>
             <a href="Depo.html">Depo</a>
+            <a href="Zar.html">Zar</a>
             <label for="chk" class="hide-menu-btn"><i class="fas fa-times"></i></label>
         </li>
     </ul>
@@ -26,24 +32,70 @@
 </div>
 
 
-<div class="baslık">
-  <fieldset>
-    <h1 >17 Ekim Perşembe</h1>
-    
-    <h2>1.Uygulama</h2>
-    <div class="k1"></div>
-    <div class="k2"></div>
-    <div class="k3"></div>
-    <div class="k4"></div>
-    <div class="k5"></div>
-    <div class="k6"></div>
-    <div class="k7"></div>
-  
-  <h2>2.Uygulama</h2>
-
-  </fieldset>
-  
+<div class="proje">
+<h1>Web Tasarım Dersi Yapılanlar</h1>
+<div class="tab-container">
+  <button class="scroll-button scroll-left" onclick="scrollLeft()">&#60;</button>
+  <div class="tab-buttons" id="tabButtons">
+      <button class="tab-button" onclick="openTab('tab1')">17 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab2')">22 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab3')">24 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab4')">29 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab5')">31 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab1')">17 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab2')">22 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab3')">24 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab4')">29 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab5')">31 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab1')">17 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab2')">22 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab3')">24 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab4')">29 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab5')">31 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab1')">17 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab2')">22 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab3')">24 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab4')">29 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab5')">31 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab1')">17 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab2')">22 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab3')">24 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab4')">29 Ekim</button>
+      <button class="tab-button" onclick="openTab('tab5')">31 Ekim</button>
+      
+  </div>
+  <button class="scroll-button scroll-right" onclick="scrollRight()">&#62;</button>
 </div>
 
+    <div id="tab1" class="tab"> 
+        <div class="baslık">
+          <fieldset>       
+            <h2>1.Uygulama</h2>
+            <div class="k1"></div>
+            <div class="k2"></div>
+            <div class="k3"></div>
+            <div class="k4"></div>
+            <div class="k5"></div>
+            <div class="k6"></div>
+            <div class="k7"></div> 
+          </fieldset>       
+        </div>
+    </div>
+
+
+    
+    <div id="tab2" class="tab">
+        
+    </div>
+
+
+
+    <div id="tab3" class="tab">
+        
+    </div>
+  </div>
+
+    
+ 
 </body>
 </html>
