@@ -146,6 +146,8 @@ body{
 
 
 
+
+
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover{
@@ -490,3 +492,27 @@ fieldset{
 
 
 
+/*___________________________*/
+
+#form{
+    background-color: gray;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1,.box2,.box3{
+    width: 342px;
+    background-color: #3d6da5;
+    margin: 5px;
+}
+
+.box1{
+    height: 75px;
+}
+.box2{
+    height: 100px;
+}
+.box3{
+    height: 30px;
+}
